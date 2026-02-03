@@ -1,7 +1,7 @@
-#wrapper {
+.wrapper {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -11,10 +11,22 @@ header {
     width: 100%;
     height: 80px;
     box-sizing: border-box;
-    border: 1px solid black;
     background-color: #990000;
-    color: white;
-    padding: 10px;
+    color: #edebeb;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
 }
 
 nav {
@@ -22,39 +34,130 @@ nav {
     top: 80px;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;
     box-sizing: border-box;
-    border: 1px solid black;
-    background-color: #EEEDEB;
-    padding: 10px;
+    background-color: #edebeb;
+    color: #990000;
+    padding: 8px 20px;
+    border-bottom: 3px dashed #990000;
 }
 
-/* ARTICLES (shared rules) */
-article {
+nav p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.contents {
     position: absolute;
+    top: 125px;
     left: 0;
-    width: 60%;
+    width: 100%;
+    padding: 20px 20px 120px 20px;
     box-sizing: border-box;
-    border: 1px solid black;
+    border-top: 3px dashed #990000;
+}
+
+.articles {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+article {
     background-color: #f9f9f9;
+    border: 2px solid #666;
+    border-radius: 8px;
     padding: 15px;
+    margin-bottom: 20px;
+    display: block;
 }
 
-article:first-of-type {
-    top: 140px;
+article:last-child {
+    margin-bottom: 0;
 }
 
-article:nth-of-type(2) {
-    top: 320px;
+article h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+article p {
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 aside {
-    position: absolute;
-    top: 140px;
-    right: 0;
-    width: 35%;
-    box-sizing: border-box;
-    border: 1px solid black;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
     background-color: #e5e5e5;
+    border: 2px solid #666;
+    border-radius: 8px;
     padding: 15px;
+}
+
+aside h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+aside p {
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #edebeb;
+    color: #990000;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.key-facts {
+    position: absolute;
+    top: 165px;
+    left: 61.5%;
+    width: 30%;
+    background-color: #fffacd;
+    border: 2px solid #660000;
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+.key-facts h3 {
+    margin-top: 0;
+    color: #660000;
+    font-size: 16px;
+    border-bottom: 2px solid #660000;
+    padding-bottom: 10px;
+}
+
+.key-facts ul {
+    list-style-position: inside;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.key-facts li {
+    margin: 8px 0;
+    color: #333;
 }
